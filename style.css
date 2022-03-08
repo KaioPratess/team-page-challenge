@@ -1,0 +1,143 @@
+/* GENERAL */
+body {
+  margin: 110px auto 24px auto;
+  max-width: 921px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  font-family: "PT Serif";
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.header .description {
+  margin-left: 215px;
+  margin-bottom: 50px;
+}
+
+.header .description h3 {
+  font-family: "Poppins";
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.header .description p {
+  font-family: "Poppins";
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 27px;
+  width: 350px;
+  height: 87px;
+}
+
+/*STRUCTURE*/
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 470px);
+  gap: 20px;
+}
+
+figure:nth-of-type(2) {
+  align-self: end;
+}
+
+figure:nth-of-type(5) {
+  align-self: end;
+}
+
+/* FIGURES */
+figure {
+  margin: 0;
+  position: relative;
+}
+
+figcaption {
+  font-family: "Poppins";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 27px;
+  margin-top: 15px;
+}
+
+figure p {
+  font-family: "PT Serif";
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0px;
+  left: 245px;
+  width: 77px;
+  writing-mode: vertical-lr;
+}
+
+img {
+  width: 238px;
+}
+
+/* FOOTER */
+.footer {
+  width: 287px;
+  margin: 115px auto 24px auto;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 980px) {
+  /* GENERAL */
+  body {
+    margin: 90px auto 24px auto;
+    max-width: 375px;
+  }
+
+  /* HEADER */
+  .header {
+    flex-direction: column;
+    margin-left: 12px;
+  }
+
+  .header .description {
+    margin: 50px 0 50px 12px;
+  }
+
+  /* FIGURES */
+  img {
+    width: 140px;
+  }
+
+  figure p {
+    top: 0px;
+    left: 145px;
+    width: 77px;
+    writing-mode: vertical-lr;
+  }
+
+  /*STRUCTURE*/
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    gap: 0;
+    margin-left: 12px;
+  }
+
+  figure:nth-of-type(5) {
+    align-self: start;
+  }
+
+  figure:nth-of-type(4) {
+    align-self: end;
+  }
+
+  figure:nth-of-type(6) {
+    align-self: end;
+  }
+}
